@@ -1,13 +1,15 @@
 ---
+clustername: mycluster
 staticips: true
-helper:
-  name: "helper"
-  ipaddr: "192.168.7.77"
 dns:
   domain: "example.com"
   clusterid: "ocp4"
-  forwarder1: "8.8.8.8"
-  forwarder2: "8.8.4.4"
+  forwarders:
+    - forwarder: "8.8.8.8"
+    - forwarder: "8.8.4.4"
+helper:
+  name: "helper"
+  ipaddr: "192.168.7.77"
 bootstrap:
   name: "bootstrap"
   ipaddr: "192.168.7.20"

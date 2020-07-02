@@ -15,8 +15,9 @@ func main() {
 	store, err := storage.GetStore(storeOptions)
 
 	options := buildah.PullOptions{
-		Store:        store,
-		ReportWriter: os.Stderr,
+		Store:            store,
+		ReportWriter:     os.Stderr,
+		RemoveSignatures: true,
 	}
 	if err != nil {
 		fmt.Println(err)

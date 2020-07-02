@@ -22,7 +22,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(store)
 	if err != nil {
 		fmt.Println(err)
 	}

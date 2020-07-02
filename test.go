@@ -11,7 +11,8 @@ import (
 
 func main() {
 	image := "docker.io/library/tomcat"
-	storeOptions, err := storage.DefaultStoreOptionsAutoDetectUID()
+	storeOptions, err := storage.DefaultStoreOptions(true, 1000)
+	fmt.Println(storeOptions.RootlessStoragePath)
 	store, err := storage.GetStore(storeOptions)
 
 	options := buildah.PullOptions{

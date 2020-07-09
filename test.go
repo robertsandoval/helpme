@@ -20,7 +20,7 @@ func main() {
 		ReportWriter:     os.Stderr,
 		RemoveSignatures: true,
 	}
-	if err != nil {
+	if err != 
 		fmt.Println(err)
 	}
 	if err != nil {

@@ -11,8 +11,13 @@ import (
 
 func main() {
 	image := "docker.io/library/tomcat"
+<<<<<<< HEAD
+	storeOptions, err := storage.DefaultStoreOptionsAutoDetectUID()
+
+=======
 	storeOptions, err := storage.DefaultStoreOptions(true, 1000)
 	fmt.Println(storeOptions.RootlessStoragePath)
+>>>>>>> 54c97cd68fb96006fb63ff09d58abcdffa43f937
 	store, err := storage.GetStore(storeOptions)
 
 	options := buildah.PullOptions{
@@ -26,7 +31,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-
+//test message
 	//	ctx, err := context.WithTimeout(context.Background(), 600*time.Second)
 	//	if err != nil {
 	//		fmt.Println(err)
